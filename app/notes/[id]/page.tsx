@@ -1,21 +1,6 @@
-// type Props = { params: Promise<{ id: string }> };
-
 import { getSingleNote } from '@/lib/api';
 import { dehydrate, HydrationBoundary, QueryClient } from '@tanstack/react-query';
 import NoteDetailsClient from '@/app/notes/[id]/NoteDetails.client';
-
-// export default async function NoteDetails({ params }: Props) {
-//   const { id } = await params;
-//   console.log('id', id);
-
-//   return (
-//     <div>
-//       <p>Note Deteil</p>
-//     </div>
-//   );
-// }
-
-// app/notes/[id]/page.tsx
 
 type Props = {
   params: Promise<{ id: string }>;

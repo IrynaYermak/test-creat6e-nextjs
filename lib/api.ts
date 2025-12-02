@@ -19,10 +19,11 @@ const myToken = process.env.NEXT_PUBLIC_NOTEHUB_TOKEN;
 
 axios.defaults.baseURL = 'https://next-v1-notes-api.goit.study';
 
-export const getNotes = async () => {
+export const getNotes = async (cstegoryId?: string) => {
   // const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
   // await delay(2000);
   const res = await axios.get('/notes', {
+    params: { cstegoryId },
     headers: {
       Authorization: `Bearer ${myToken}`,
     },
